@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align content</title>
+    <style>
+        .container{
+            height: 350px;
+            max-width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid black;
+        }
+
+        .item{
+            background-color: orangered;
+            padding: 0 5px;
+            margin: 5px;
+            flex: 1;
+            text-align: center;
+            color: white;
+        }
+
+        .stretch{
+         align-content: stretch;   
+        }
+
+        .center{
+            align-content: center;
+        }
+
+        .flex-start{
+           align-content: flex-start; 
+        }
+
+        .flex-end{
+            align-content: end;
+        }
+
+        .space-around{
+            align-content: space-around;
+        }
+
+        .space-between{
+            align-content: space-between;
+        }
+        </style>
+</head>
+<body>
+   <p>stretch</p>
+   <div class="container stretch">
+       <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+       <div class="item">Lorem ipsum dolor sit amet</div>
+       <div class="item">Lorem ipsum dolor, sit amet</div>
+       <div class="item">Lorem ipsum dolor sit, amet consectetur  </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+   </div>
+
+   <p>center</p>
+   <div class="container center">
+       <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+       <div class="item">Lorem ipsum dolor sit amet</div>
+       <div class="item">Lorem ipsum dolor, sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit, amet consectetur  sapiente </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+   </div>
+
+   <p>flex-start</p>
+   <div class="container flex-start">
+       <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+       <div class="item">Lorem ipsum dolor sit amet</div>
+       <div class="item">Lorem ipsum dolor, sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit, amet consectetur  sapiente </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+   </div>
+
+   <p>flex-end</p>
+   <div class="container flex-end">
+       <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+       <div class="item">Lorem ipsum dolor sit amet</div>
+       <div class="item">Lorem ipsum dolor, sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit, amet consectetur  sapiente </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+   </div>
+
+   <p>space-around</p>
+   <div class="container space-around">
+       <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+       <div class="item">Lorem ipsum dolor sit amet</div>
+       <div class="item">Lorem ipsum dolor, sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit, amet consectetur  sapiente </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+   </div>
+
+   <p>space-between</p>
+   <div class="container space-between">
+       <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+       <div class="item">Lorem ipsum dolor sit amet</div>
+       <div class="item">Lorem ipsum dolor, sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit, amet consectetur  sapiente </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+       <div class="item">Lorem ipsum dolor sit amet consectetur </div>
+   </div>
+</body>
+</html>
+
+<!--
+    - É a propriedade responsável por tratar o alinhamento das linhas
+    do container em relação ao eixo vertical do container.
+
+    * Precisamos que:
+    - O container utilize quebra de linhas
+    - A altura do container seja maior que a soma das linhas dos itens
+
+    Tipos de alinhamentos
+
+    - center: alinhamento dos itens ao centro
+    - stretch: é o padrão, e os flex itens crescem igualmente
+    - flex-start: alinhamento dos itens no início
+    - flex-end: alinhamento dos itens no final
+    - space-between: cria um espeçamento igual entre os elementos
+    - space-around: os espaçamentos do meio são duas vezes
+    maiores que o inicial e final
+-->
